@@ -1,0 +1,71 @@
+algorithm procedure curious
+	local parameters
+		integer n
+	variable
+		integer min, max, old
+		t_list l
+begin
+	do
+		l.lenght <_ 0
+		write(n)
+		digit_list(n, l) //build a list from n
+		read_mirror(l, min, max)
+		old <- n
+		n <- max-min
+	while n <> old
+end algorithm procedure curious
+
+QUICKSORT
+=========
+
+
+algorithm procedure partition : element
+	global parameters
+		integer left, right
+		e_list tab
+	variables
+		integer i
+begin
+	
+	/* PARTITION */
+	swap(pivot, tab.lenght)
+	pivot <- left
+	i <- left
+	while i < right - 1
+		if (tab[i] < tab[pivot]) then
+			swap(tab, i, pivot)
+			pivot <- pivot + 1
+		end if
+	end while
+	swap(tab, pivot, right)
+	return pivot
+	
+end algorithm function
+
+algorithm procedure quicksort
+	global parameters
+		t_int_vect tab
+	local parameters
+	
+================================= SWAP
+
+algorithm procedure swap
+	local parameters
+		element a, b
+	global parameters
+		e_list tab
+	variables
+		element c
+begin
+	c <- tab[a]
+	tab[a] <- tab[b]
+	tab[b] <- c
+end algorithm procedure
+
+============================= 
+
+
+Syntaxe :
+p <- @x
+p^ <- 42
+NUL, not NULL
